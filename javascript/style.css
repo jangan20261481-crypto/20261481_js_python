@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  background-color: #f5f7fb;
+  color: #1f2937;
+}
+
+header {
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #1d4ed8;
+  color: white;
+}
+
+.notice {
+  margin-top: 20px;
+  padding: 20px;
+  border-left: 6px solid #2563eb;
+  border-radius: 8px;
+  background-color: white;
+}
