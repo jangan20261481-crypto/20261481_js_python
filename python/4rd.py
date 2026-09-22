@@ -1,0 +1,29 @@
+print("%d" %123)
+
+
+print("100")
+print("%d" %100)
+print("100 + 100")
+print("%d" % (100 + 100))
+print("%d %d" % (100, 200))
+print("%d" % (100))
+
+print("%d / %d = %d" %(100, 200, 0))
+
+print("%d" % 123)
+print("%5d" % 123)
+print("%05d" % 123)
+
+print("%f" % 123.45)
+print("%7.1f" % 123.45)
+print("%7.3f" % 123.45)
+
+print("%s" % "python")
+print("%10s" % "python")
+
+print("한 행입니다. 또 한 행입니다.")
+
+for i in range(1, 6):
+    print(" "* (5-i) + "*" * (2*i - 1))
+for i in range(4, 0, -1):
+    print(" " * (5-i) + "*" * (2*i - 1))
