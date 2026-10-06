@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>지도</title>
+</head>
+<body>
+
+    <button onclick="window.location.href='https://www.google.com/maps'">구글 지도 열기</button>
+
+
+
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+
+
+let text = ""
+let i = 0;
+let sum =0;
+
+do {
+  text += "<br>The number is " + i;
+  sum += i;
+  i+=5;
+}
+while (i <= 100);
+
+
+
+let text = "";
+
+for (let i = 1; i <= 10; i++) {
+  if (i === 3) { continue; }
+  text = i + "<br>" + text; //
+}
+
+
+
+document.getElementById("text").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+
