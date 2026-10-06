@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>등급 확인하기</title>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li>
+                <label for="price1">구매금액 1 : </label>
+                <input type="text" id="price1">원
+            </li>
+            <li>
+                <label for="price2">구매금액 2 : </label>
+                <input type="text" id="price2">원
+            </li>
+            <li>
+                <label for="price3">구매금액 3 : </label>
+                <input type="text" id="price3">원
+            </li>
+            <li>
+                <!-- 버튼 텍스트 수정 완료 -->
+                <button onclick="showprice()">등급 확인하기</button>
+            </li>
+        </ul>
+        <div id="showresult"></div>
+    </div>
+
+    <script>
+        function showprice() {
+            
+            var p1 = Number(document.querySelector("#price1").value) || 0;
+            var p2 = Number(document.querySelector("#price2").value) || 0;
+            var p3 = Number(document.querySelector("#price3").value) || 0;
+
+           
+            var totalPrice = p1 + p2 + p3;
+
+            
+            var grade = "";
+            var rate = 0;
+
+            if (totalPrice >= 50000) {
+                grade = "VIP";
+                rate = 0.03; //적립율 3%적용
+            } else if (totalPrice >= 30000) {
+                grade = "GOLD";
+                rate = 0.02; //적립율 2%적용
+            } else {
+                grade = "SILVER";
+                rate = 0.01; //적립율 1%적용
+            }
+
+            
+            var savedMoney = totalPrice * (rate );
+
+            
+            var resultText = "당신의 구매금액은 " + totalPrice + "원으로 " + grade + "고객으로 적립율은 " + rate + "%이며, 구매하신 금액의 적립금은 " + savedMoney + "원 입니다.";
+            
+            document.querySelector("#showresult").innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
